@@ -19,18 +19,21 @@ public class HttpServer
             responseText = await reader.ReadToEndAsync();
         }
         
-        Console.WriteLine("================\n" +
+        Console.WriteLine("\n================\n" +
                           "html извлечен");
         return responseText;
     }
     
     private void StartServer()
     {
-        var prefix = JsonSerializer.Deserialize<Server> (File.ReadAllText("server.json"));
-        var url = $"http://{prefix.host}:{prefix.port}/{prefix.path}";
-        _server.Prefixes.Add(url);
+        Setting prefix = JsonSerializer.Deserialize<Setting> (File.ReadAllText("server.json"));
+        var uri = new Uri($"http://{prefix.server.host}:{prefix.server.port}/{prefix.server.path}");
+        var uriString = uri.ToString();
+        _server.Prefixes.Add(uriString);
         _server.Start();
-        Console.WriteLine($"Сервер запущен\n{url}");
+
+        Console.Clear();
+        Console.WriteLine($"Сервер запущен\n{uriString}");
     }
 
     private async Task AsyncListen()
@@ -45,7 +48,7 @@ public class HttpServer
         }
         catch (HttpListenerException)
         {
-            Console.WriteLine("Сервер закрылся");
+            Console.WriteLine("Ошибка обработана");
         }
     }
 
@@ -68,8 +71,11 @@ public class HttpServer
 
     public void Run()
     {
-        StartServer();
-        var taskAsyncListen = Task.Run(async () => { await AsyncListen(); });
+        while (!_server.IsListening)
+        {
+            ConsoleCommand.PrintMenu();
+            ConsoleCommand.CommandProcessing(_server);
+        }
         
         var taskCommandProcessing = Task.Run(() =>
         {
@@ -78,6 +84,9 @@ public class HttpServer
                 ConsoleCommand.CommandProcessing(_server);
             }
         });
+        
+        StartServer();
+        var taskAsyncListen = Task.Run(async () => { await AsyncListen(); });
         
         Task.WaitAll(taskAsyncListen, taskCommandProcessing);
     }

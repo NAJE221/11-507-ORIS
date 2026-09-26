@@ -1,8 +1,19 @@
-﻿using System.Net;
+﻿using System.Globalization;
+using System.Net;
 namespace http_server;
 
 public static class ConsoleCommand
 {
+
+    public static void PrintMenu()
+    {
+        Console.Clear();
+        Console.WriteLine("Доступные команды:\n" +
+                          "start - запустить сервер\n" +
+                          "stop - остановить сервер\n");
+        
+    }
+    
 
     public static string InputCommand()
     {
@@ -16,16 +27,23 @@ public static class ConsoleCommand
         
         switch (command)
         {
+            
+            case "start":
+                
+                Console.WriteLine(server.IsListening ? "Сервер уже запущен" : "\nСервер успешно запущен");
+                if (!server.IsListening) server.Start();
+                
+                break;
+            
             case "stop":
                 try
                 {
-                    server.Stop();
-                    Console.WriteLine("Программа остановлена");
+                    Console.WriteLine(server.IsListening ? "\nСервер остановлен" : "\nСервер не запущен!");
+                    if (server.IsListening) server.Stop();
                 }
                 catch (InvalidOperationException)
                 {
-                    Console.WriteLine($"Сервер еще не запущен!\n" +
-                                      $"Чтобы запустить, введите - start");
+                    Console.WriteLine($"Ошибка обработана");
                 }
                 break;
         }
