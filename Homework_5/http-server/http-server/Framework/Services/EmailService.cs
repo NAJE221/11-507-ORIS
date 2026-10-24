@@ -43,7 +43,7 @@ public class EmailService(IResourceService resourceService) : ISendMessageServic
             using var client = new SmtpClient();
 
             await client.ConnectAsync("smtp.gmail.com", 587 , SecureSocketOptions.StartTls);
-            await client.AuthenticateAsync("artemigorevich113@gmail.com", "bkcu yvab tcjx vszb");
+            await client.AuthenticateAsync("artemigorevich113@gmail.com", "тут пароль");
             await client.SendAsync(message);
             await client.DisconnectAsync(true);
          
