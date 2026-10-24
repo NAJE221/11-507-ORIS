@@ -1,8 +1,9 @@
-﻿{"Server":
+﻿
+{"Server":
     {
-      "Host": "127.0.0.1",
-      "Port": 8080,
-      "Path": "/index.html/"
+      "host": "127.0.0.1",
+      "port": "8888",
+      "path": "catalog/"
     }
 }
 
