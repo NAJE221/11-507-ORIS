@@ -32,8 +32,6 @@ public class EmailService(IResourceService resourceService) : ISendMessageServic
         return message;
     }
 
- 
-
     public async Task SendMessageAsync(HttpListenerContext context)
     {
         
@@ -43,16 +41,22 @@ public class EmailService(IResourceService resourceService) : ISendMessageServic
             using var client = new SmtpClient();
 
             await client.ConnectAsync("smtp.gmail.com", 587 , SecureSocketOptions.StartTls);
-            await client.AuthenticateAsync("artemigorevich113@gmail.com", "bkcu yvab tcjx vszb");
+            await client.AuthenticateAsync("artemigorevich113@gmail.com", "Введите свой пароль");
             await client.SendAsync(message);
             await client.DisconnectAsync(true);
          
+            var currentPath = Directory.GetCurrentDirectory();
+            var path = Path.Combine(currentPath, "static", "statusPages", "successfulPages", "email-sent.html");
             
-            await FilePush(@"C:\Users\Artem\Desktop\11-507-ORIS\Homework_4\http-server\http-server\static\statusPages\successfulPages\email-sent.html", context.Response);
+            Console.WriteLine(path);
+            Console.WriteLine(Directory.Exists(Path.Combine(currentPath, "static")));
+            Console.WriteLine(File.Exists(path));
+            
+            await FilePush(path, context.Response);
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"[Email] Ошибка: {ex.Message}");
+            Console.WriteLine($"[Email] Ошибка: {ex}");
             await resourceService.SendErrorPage("500", context);
         }
     }

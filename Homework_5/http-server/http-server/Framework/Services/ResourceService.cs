@@ -25,10 +25,10 @@ public class ResourceService : IResourceService
     }
     
     // TODO доделать обработку ошибок - ввел не число -> КАБУМ 
-    // TODO проверять на то что приходит не NULL
-    // Переделать с асинхронного на паралельный
+
     public async Task SendErrorPage(string codeError, HttpListenerContext context)
     {
+
         var currentPath = Directory.GetCurrentDirectory();
                     
         var pagePath = Path.Combine(currentPath , "static" , "statusPages", "errorPages", $"{codeError}.html");
@@ -38,5 +38,7 @@ public class ResourceService : IResourceService
 
         await FilePush(pagePath, response);
     }
+    
+    
     
 }

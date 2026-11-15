@@ -30,12 +30,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Include="static\**">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
-    </ItemGroup>
-
-    <ItemGroup>
       <Content Include="static\koleso.ru\.idea\.gitignore" />
       <Content Include="static\koleso.ru\.idea\koleso.ru.iml" />
       <Content Include="static\koleso.ru\.idea\modules.xml" />
@@ -53,7 +47,14 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Framework\Domain\" />
+        <None Update="static\**\*">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+   
+
+    <ItemGroup>
       <Folder Include="static\statusPages\" />
     </ItemGroup>
 

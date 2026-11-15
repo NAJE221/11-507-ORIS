@@ -21,7 +21,6 @@ internal class ControllerHandler(IResourceController resourceController) : Handl
                 await resourceController.SendErrorPage("404", context);
                 return;
             }
-            Console.WriteLine("1");
             var request = context.Request;
             
             var requestMethod =  request.HttpMethod;
@@ -36,7 +35,6 @@ internal class ControllerHandler(IResourceController resourceController) : Handl
                 await resourceController.SendErrorPage("404", context);
                 return;
             }
-            Console.WriteLine("2");
             var controller = ControllerFactory.Create(routeDescriptor.Controller, context);
             var method = routeDescriptor.Method;
             

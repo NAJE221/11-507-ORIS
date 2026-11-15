@@ -7,8 +7,8 @@ public static class FileService
 {
     public static async Task FilePush(string filePath, HttpListenerResponse response)
     {
-        byte[] buffer = await File.ReadAllBytesAsync(filePath);
-        Stream output = response.OutputStream;
+        var buffer = await File.ReadAllBytesAsync(filePath);
+        await using Stream output = response.OutputStream;
         response.ContentLength64 = buffer.Length;
         
         FileInfo fileInfo = new(filePath);
