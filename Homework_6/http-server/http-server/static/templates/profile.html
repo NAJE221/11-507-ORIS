@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Профиль</title>
+</head>
+<body>
+  <h1>${user.name}</h1>
+  <p>Email: ${user.email}</p>
+  <p>Возраст: ${user.age}</p>
+
+  $if(user.age >= 18)
+    <p>Добро пожаловать, ${user.name}</p>
+  $else
+    <p>Вход на сайт запрещён</p>
+  $endif
+
+  $if(user.age < 30)
+    <p>Молодой пользователь</p>
+  $endif
+</body>
+</html>
