@@ -2,7 +2,7 @@
 
 `- HomeWork_1 - Верстка сайта: «Страница поиска»`
 
-`- HomeWork_2 - HttpListener. HTTP-сервер на C#, Вёрстка knowledge`
+`- HomeWork_2 - HttpListener. HTTP-сервер на C#, Вёрстка knowledge + koleso.ru`
 
 `- HomeWork_3 — HttpListener.` `(Статические файлы, передача типов файлов)`
 
