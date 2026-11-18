@@ -10,4 +10,6 @@
 
 `- HomeWork_5 — HttpListener. (Отправка сообщения на почту) (в моём случае отправка ссылки яндекс диска на котором лежит zip архив с дз`
 
-`- HomeWork_6 — HttpListener.` `(Библиотека HtmlTemplater)`
+`- HomeWork_6 — HttpListener.` `(Библиотека MiniHttpServer.HtmlTemplating)`
+
+`- HomeWork_8 — HttpListener.` `(Библиотека MiniHttpServer.ORM)`
