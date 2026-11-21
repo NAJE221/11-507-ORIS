@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniHttpServer.HtmlTemplating", "MiniHttpServer.HtmlTemplating\MiniHttpServer.HtmlTemplating.csproj", "{8FCE4006-D406-4B06-BB97-8CF44D637355}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniHttpServer.HtmlTemplating.UnitTests", "MiniHttpServer.HtmlTemplating.UnitTests\MiniHttpServer.HtmlTemplating.UnitTests.csproj", "{5EA3738A-3090-42D6-8F15-75E66BC918CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniHttpServer.Framework.UnitTests", "MiniHttpServer.Framework.UnitTests\MiniHttpServer.Framework.UnitTests.csproj", "{2F835FE3-FF88-4F35-A12A-3C49AF5D375D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniHttpServer", "MiniHttpServer\MiniHttpServer.csproj", "{21890EFC-D61D-4B56-A219-AC36FC213458}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniHttpServer.Framework", "MiniHttpServer.Framework\MiniHttpServer.Framework.csproj", "{C5549CD3-1289-4097-AA5B-F781500C4201}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FCE4006-D406-4B06-BB97-8CF44D637355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FCE4006-D406-4B06-BB97-8CF44D637355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FCE4006-D406-4B06-BB97-8CF44D637355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FCE4006-D406-4B06-BB97-8CF44D637355}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EA3738A-3090-42D6-8F15-75E66BC918CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EA3738A-3090-42D6-8F15-75E66BC918CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EA3738A-3090-42D6-8F15-75E66BC918CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EA3738A-3090-42D6-8F15-75E66BC918CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F835FE3-FF88-4F35-A12A-3C49AF5D375D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F835FE3-FF88-4F35-A12A-3C49AF5D375D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F835FE3-FF88-4F35-A12A-3C49AF5D375D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F835FE3-FF88-4F35-A12A-3C49AF5D375D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21890EFC-D61D-4B56-A219-AC36FC213458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21890EFC-D61D-4B56-A219-AC36FC213458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21890EFC-D61D-4B56-A219-AC36FC213458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21890EFC-D61D-4B56-A219-AC36FC213458}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5549CD3-1289-4097-AA5B-F781500C4201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5549CD3-1289-4097-AA5B-F781500C4201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5549CD3-1289-4097-AA5B-F781500C4201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5549CD3-1289-4097-AA5B-F781500C4201}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
