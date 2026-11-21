@@ -12,4 +12,6 @@
 
 `- HomeWork_6 — HttpListener.` `(Библиотека MiniHttpServer.HtmlTemplating)`
 
+`- HomeWork_7 — HttpListener.` `(Unit-tests MiniHttpServer.Framework.UnitTests , MiniHttpServer.HtmlTemplating.UnitTests)`
+
 `- HomeWork_8 — HttpListener.` `(Библиотека MiniHttpServer.ORM)`
