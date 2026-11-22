@@ -1,0 +1,18 @@
+﻿{   
+  "Server":
+    {
+      "Host": "127.0.0.1",
+      "Port": 8080,
+      "Path": "auth/login/"
+    },
+  
+    "DatabaseServerOptions": 
+    {
+      "Host": "localhost",
+      "Port": 5432,
+      "Username": "postgres",
+      "Password": "18041804",
+      "DataBase": "users"
+    }
+}
+
