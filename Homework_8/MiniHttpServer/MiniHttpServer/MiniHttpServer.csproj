@@ -21,6 +21,9 @@
       <None Update="Secrets\server.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+      <None Update="server.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
     <ItemGroup>

@@ -13,7 +13,7 @@ public class ApplicationBuilder
     {
         var connectionString = await LoaderDbOptionsService.LoadOptions
             // Настройки DB
-            ("Secrets/server.json" , "DatabaseServerOptions");
+            ("server.json" , "DatabaseServerOptions");
 
         // Создание драйвера (в данном случае NpgSql)
         IDbDriver driver = new NpgsqlDbDriver(connectionString);
@@ -37,7 +37,7 @@ public class ApplicationBuilder
         
         return await FrameworkBuilder.CreateBuilder
             // Настройки сервера
-            ("Secrets/server.json" , "Server" , storage);
+            ("server.json" , "Server" , storage);
     }
     
 
